@@ -1,41 +1,49 @@
-import { TiArrowRight } from "react-icons/ti";
+import Fruit from "../assets/fruit.png";
+import Vegetable from "../assets/vegetable.png";
 
-const Hero = () => {
+const Banner = () => {
   return (
     <div
-      style={{
-        backgroundImage: `url('/Image.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "300px",
-      }}
-      className="md:h-[600px] w-full relative mr-[-10px]" // Removed mt-8 and md:mt-[100px]
+      className="flex flex-col sm:flex-row  gap-4 md:m-10  lg:my-20 lg:mx-[150px]
+      m-4"
     >
-      <img src="/patterns.png" alt="" className="w-full md:h-[580px] h-auto" />
       <div
-        className="absolute top-10 left-10 md:top-[145px] md:left-[160px] w-[350px]
-        flex flex-col gap-5"
+        style={{
+          backgroundImage: `url(${Fruit})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="w-full min-h-[200px] rounded-xl relative"
       >
-        <div className="">
-          <p className="font-yellow font-[400] text-[35px] leading-10 text-[#68A47F]">
-            100% Natural food
+        <div className=" absolute top-9 left-5 w-[200px]">
+          <p className=" font-yellow font[500] text-[35px] leading-10 text-[#FFFFFF]">
+            Natural
           </p>
-          <h1 className="font-roboto font-[700] md:text-[47px] pr-5 md:pr-0 text-[30px] text-[#274C5B]">
-            Choose the best healthier way of life
-          </h1>
+          <p className=" font-roboto font-[700] text-[30px] leading-10 text-[#FFFFFF]">
+            Get Garden Fresh Fruits
+          </p>
         </div>
-        <div className="">
-          <button
-            className="p-5 flex justify-center items-center gap-2
-            font-[600] text-[20px] text-[#274C5B] font-roboto leading-6 rounded-xl bg-[#EFD372]"
-          >
-            Explore Now
-            <TiArrowRight className="bg-[#274C5B] rounded-full text-white" />
-          </button>
+      </div>
+      <div
+        style={{
+          backgroundImage: `url(${Vegetable})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className=" w-full h-[200px] rounded-xl relative"
+      >
+        <div className="absolute top-9 md:left-5 w-[200px]">
+          <p className=" font-yellow font[500] text-[35px] leading-10 text-[#7EB693]">
+            Offer!!
+          </p>
+          <p className=" font-roboto font-[700] text-[30px] leading-10 text-[#274C5B]">
+            Get 10% off
+            <br /> on Vegetables
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default Banner;
