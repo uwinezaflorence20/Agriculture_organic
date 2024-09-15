@@ -1,31 +1,45 @@
-const ImagePage = () => {
+const Banner = () => {
   return (
-    <section>
-      <div className="mx-auto max-w-screen-xl ml-12">
-        <div className="grid grid-row-1  gap-10 lg:grid-cols-2">
-          <div className=" relative flex items-center justify-center "> 
-            <img src="/f3.jpeg" alt="" className="rotate-180 w-96 h-64 rounded-xl " />
-            <p className="absolute top-1/2 left-40 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl   bg-opacity-50 px-4 py-2 rounded-md">
-             <span className="italic">natural!!!<br></br></span>
-             <span className=" font-bold"> Get Garden
-              <br></br> Fresh Fruits</span>
-            </p>
-            
-          </div>
-
-          <div className=" relative flex items-center justify-center w-60"> 
-            <img src="/f2.png" alt="" className="-rotate-90 max-w-xl  max-h-96 rounded-xl" />
-            <p className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl   bg-opacity-50 px-4 py-2 rounded-md">
-             <span className="italic text-[#7EB693]">natural!!!<br></br></span>
-             <span className=" font-bold text-[#274C5B]"> Get 10% off
-             
-              <br></br> on Vegetables</span>
-            </p>
-          </div>
+    <div
+      className="flex flex-col sm:flex-row gap-4 md:m-10 lg:my-20 lg:mx-[150px] m-4"
+    >
+      <div
+        style={{
+          backgroundImage: `url('/fruit.png')`, // No need to import, just reference the path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="w-full min-h-[200px] rounded-xl relative"
+      >
+        <div className="absolute top-9 left-5 w-[200px]">
+          <p className="font-yellow font[500] text-[35px] leading-10 text-[#FFFFFF]">
+            Natural
+          </p>
+          <p className="font-roboto font-[700] text-[30px] leading-10 text-[#FFFFFF]">
+            Get Garden Fresh Fruits
+          </p>
         </div>
       </div>
-    </section>
+      <div
+        style={{
+          backgroundImage: `url('/vegetable.png')`, // No need to import, just reference the path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="w-full h-[200px] rounded-xl relative"
+      >
+        <div className="absolute top-9 md:left-5 w-[200px]">
+          <p className="font-yellow font[500] text-[35px] leading-10 text-[#7EB693]">
+            Offer!!
+          </p>
+          <p className="font-roboto font-[700] text-[30px] leading-10 text-[#274C5B]">
+            Get 10% off
+            <br /> on Vegetables
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default ImagePage;
+export default Banner;

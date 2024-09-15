@@ -2,7 +2,7 @@ import HomePage from "./Components/HomePage"
 
 import Navbar from "./Components/Navbar"
 import SecondPage from "./Components/ImagePage"
-import ThirdPage from "./Components/ThirdPage"
+import About from "./Components/About"
 import FoodCards from "./Components/FoodCards"
 import Testimonial from "./Components/Testimonial"
 import Offer from "./Components/Offer"
@@ -17,7 +17,7 @@ const App = () => {
       <Navbar/>
       <HomePage/>
     <SecondPage/>
-    <ThirdPage/>
+    <About/>
     <FoodCards/>
     <Testimonial/>
     <Offer/>
